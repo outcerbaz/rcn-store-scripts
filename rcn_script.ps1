@@ -21,6 +21,7 @@ Function AtivarPlanoDesempenhoMaximo {
     Write-Host "Ativando plano de energia: Desempenho Maximo..."
     powercfg -setactive SCHEME_MIN
     Write-Host "Plano de energia 'Desempenho Maximo' ativado com sucesso!"
+    Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow
 }
 
 Function DesativarPrecisaoPonteiro {
@@ -30,14 +31,16 @@ Function DesativarPrecisaoPonteiro {
     Set-ItemProperty -Path $regPath -Name "MouseThreshold1" -Value 0
     Set-ItemProperty -Path $regPath -Name "MouseThreshold2" -Value 0
     Write-Host "Precisao do ponteiro desativada com sucesso!"
+    Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow
 }
 
 Function ConfigurarTeclado {
     Write-Host "Configurando opcoes do teclado para repeticao e intermitencia..."
     $regPathTeclado = "HKCU:\\Control Panel\\Keyboard"
-    Set-ItemProperty -Path $regPathTeclado -Name "KeyboardDelay" -Value 1
-    Set-ItemProperty -Path $regPathTeclado -Name "KeyboardSpeed" -Value 31
+    Set-ItemProperty -Path $regPathTeclado -Name "KeyboardDelay" -Value 0  # Configura o intervalo de repetição para o máximo
+    Set-ItemProperty -Path $regPathTeclado -Name "KeyboardSpeed" -Value 31  # Configura a taxa de repetição para rápida
     Write-Host "Configuracoes do teclado ajustadas com sucesso!"
+    Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow
 }
 
 # Loop principal
@@ -70,23 +73,23 @@ Do {
     $escolha = Read-Host "Digite o numero da sua escolha"
 
     Switch ($escolha) {
-        1 { Write-Host "Criar ponto de restauracao..." }
-        2 { Write-Host "Excluir arquivos temporarios..." }
-        3 { Write-Host "Desativar Consumer Features..." }
-        4 { Write-Host "Desativar Telemetria..." }
-        5 { Write-Host "Desativar Historico de Atividades..." }
-        6 { Write-Host "Desativar GameDVR..." }
-        7 { Write-Host "Desativar Hibernacao..." }
-        8 { Write-Host "Desativar Homegroup..." }
-        9 { Write-Host "Preferir IPv4 ao inves de IPv6..." }
-        10 { Write-Host "Desativar Rastreamento de Localizacao..." }
-        11 { Write-Host "Desativar Storage Sense..." }
-        12 { Write-Host "Desativar Wifi-Sense..." }
-        13 { Write-Host "Habilitar Finalizar Tarefa com Botao Direito..." }
-        14 { Write-Host "Executar Limpeza de Disco..." }
-        15 { Write-Host "Configurar Terminal do Windows para PowerShell 7..." }
-        16 { Write-Host "Desativar Telemetria do PowerShell 7..." }
-        17 { Write-Host "Configurar Hibernacao como padrao..." }
+        1 { Write-Host "Criar ponto de restauracao..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        2 { Write-Host "Excluir arquivos temporarios..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        3 { Write-Host "Desativar Consumer Features..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        4 { Write-Host "Desativar Telemetria..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        5 { Write-Host "Desativar Historico de Atividades..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        6 { Write-Host "Desativar GameDVR..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        7 { Write-Host "Desativar Hibernacao..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        8 { Write-Host "Desativar Homegroup..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        9 { Write-Host "Preferir IPv4 ao inves de IPv6..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        10 { Write-Host "Desativar Rastreamento de Localizacao..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        11 { Write-Host "Desativar Storage Sense..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        12 { Write-Host "Desativar Wifi-Sense..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        13 { Write-Host "Habilitar Finalizar Tarefa com Botao Direito..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        14 { Write-Host "Executar Limpeza de Disco..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        15 { Write-Host "Configurar Terminal do Windows para PowerShell 7..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        16 { Write-Host "Desativar Telemetria do PowerShell 7..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
+        17 { Write-Host "Configurar Hibernacao como padrao..." ; Write-Host "Depois de fazer todos os seus comandos, basta reiniciar!" -ForegroundColor Yellow }
         18 { AtivarPlanoDesempenhoMaximo }
         19 { DesativarPrecisaoPonteiro }
         20 { ConfigurarTeclado }
