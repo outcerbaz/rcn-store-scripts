@@ -113,7 +113,7 @@ Do {
     Write-Host "[14] Executar Limpeza de Disco"
     Write-Host "[15] Configurar Terminal do Windows para PowerShell 7"
     Write-Host "[16] Desativar Telemetria do PowerShell 7"
-    Write-Host "[17] Configurar Hibernação como padrão (ideal para laptops)"
+    Write-Host "[17] Configurar Hibernacao como padrao (ideal para laptops)"
     Write-Host "[18] Ativar plano de energia: Desempenho Maximo"
     Write-Host "[19] Desativar 'Aprimorar precisao do ponteiro'"
     Write-Host "[20] Configurar teclado (repeticao e intermitencia)"
