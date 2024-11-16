@@ -63,7 +63,7 @@ Do {
         1 { CreateRestorePoint }
         2 { DeleteTemporaryFiles }
         7 { DisableHibernation }
-        0 { Write-Host "Saindo do script. Ate mais!"; Break }
+        0 { Write-Host "Saindo do script. obrigado"; Break }
         Default { Write-Host "Escolha invalida. Tente novamente." }
     }
 } While ($choice -ne 0)
