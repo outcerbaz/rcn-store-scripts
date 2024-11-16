@@ -1,4 +1,4 @@
-# RCN Store Optimization Script
+# RCN Store Optimization Script - CMD Version
 Clear-Host
 Write-Host "----------------------------------------"
 Write-Host "         RCN STORE - OTIMIZAÇÃO         "
@@ -24,97 +24,36 @@ Write-Host "[17] Configurar Hibernação como padrão (ideal para laptops)"
 Write-Host "[0] Sair"
 Write-Host "----------------------------------------"
 
+# Função para executar comandos no CMD
+Function RunInCMD {
+    param (
+        [string]$Command
+    )
+    cmd.exe /c $Command
+}
+
 # Função para criar ponto de restauração
 Function CreateRestorePoint {
     Write-Host "Criando ponto de restauração..."
-    checkpoint-computer -Description "Ponto de Restauração RCN Store" -RestorePointType "MODIFY_SETTINGS"
+    RunInCMD "wmic.exe /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint 'Ponto RCN Store', 100, 7"
     Write-Host "Ponto de restauração criado com sucesso!"
 }
 
 # Função para excluir arquivos temporários
 Function DeleteTemporaryFiles {
     Write-Host "Excluindo arquivos temporários..."
-    Remove-Item -Path "$env:temp\*" -Recurse -Force -ErrorAction SilentlyContinue
-    Remove-Item -Path "$env:windir\temp\*" -Recurse -Force -ErrorAction SilentlyContinue
+    RunInCMD "del /s /q %temp%\*"
     Write-Host "Arquivos temporários excluídos!"
-}
-
-# Função para desativar recursos do consumidor
-Function DisableConsumerFeatures {
-    Write-Host "Consumer Features desativadas!"
-}
-
-# Função para desativar telemetria
-Function DisableTelemetry {
-    Write-Host "Telemetria desativada!"
-}
-
-# Função para desativar histórico de atividades
-Function DisableActivityHistory {
-    Write-Host "Histórico de Atividades desativado!"
-}
-
-# Função para desativar GameDVR
-Function DisableGameDVR {
-    Write-Host "GameDVR desativado!"
 }
 
 # Função para desativar hibernação
 Function DisableHibernation {
+    Write-Host "Desativando hibernação..."
+    RunInCMD "powercfg -h off"
     Write-Host "Hibernação desativada!"
 }
 
-# Função para desativar Homegroup
-Function DisableHomegroup {
-    Write-Host "Homegroup desativado!"
-}
-
-# Função para preferir IPv4
-Function PreferIPv4OverIPv6 {
-    Write-Host "IPv4 preferido sobre IPv6!"
-}
-
-# Função para desativar rastreamento de localização
-Function DisableLocationTracking {
-    Write-Host "Rastreamento de Localização desativado!"
-}
-
-# Função para desativar Storage Sense
-Function DisableStorageSense {
-    Write-Host "Storage Sense desativado!"
-}
-
-# Função para desativar Wifi-Sense
-Function DisableWifiSense {
-    Write-Host "Wifi-Sense desativado!"
-}
-
-# Função para habilitar finalizar tarefa com botão direito
-Function EnableEndTaskWithRightClick {
-    Write-Host "Finalizar Tarefa com Botão Direito habilitado!"
-}
-
-# Função para executar limpeza de disco
-Function RunDiskCleanup {
-    Write-Host "Executando Limpeza de Disco..."
-    Start-Process -FilePath "cleanmgr.exe" -ArgumentList "/sagerun:1" -NoNewWindow -Wait
-    Write-Host "Limpeza de Disco concluída!"
-}
-
-# Função para configurar terminal do Windows para PowerShell 7
-Function ChangeTerminalToPS7 {
-    Write-Host "Terminal configurado para PowerShell 7!"
-}
-
-# Função para desativar telemetria do PowerShell 7
-Function DisablePS7Telemetry {
-    Write-Host "Telemetria do PowerShell 7 desativada!"
-}
-
-# Função para configurar hibernação como padrão
-Function SetHibernationDefault {
-    Write-Host "Hibernação configurada como padrão!"
-}
+# Outras funções podem ser adicionadas aqui, da mesma forma...
 
 # Loop do menu
 Do {
@@ -122,21 +61,7 @@ Do {
     Switch ($choice) {
         1 { CreateRestorePoint }
         2 { DeleteTemporaryFiles }
-        3 { DisableConsumerFeatures }
-        4 { DisableTelemetry }
-        5 { DisableActivityHistory }
-        6 { DisableGameDVR }
         7 { DisableHibernation }
-        8 { DisableHomegroup }
-        9 { PreferIPv4OverIPv6 }
-        10 { DisableLocationTracking }
-        11 { DisableStorageSense }
-        12 { DisableWifiSense }
-        13 { EnableEndTaskWithRightClick }
-        14 { RunDiskCleanup }
-        15 { ChangeTerminalToPS7 }
-        16 { DisablePS7Telemetry }
-        17 { SetHibernationDefault }
         0 { Write-Host "Saindo do script. Até mais!"; Break }
         Default { Write-Host "Escolha inválida. Tente novamente." }
     }
