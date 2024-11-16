@@ -2,7 +2,31 @@
 [console]::OutputEncoding = [System.Text.Encoding]::UTF8
 Clear-Host
 
-# Funcoes (as mesmas do script anterior)...
+# Função para validação de senha
+Function ValidatePassword {
+    $password = "214213"  # Senha definida como 214213
+    Write-Host "----------------------------------------"
+    Write-Host "           RCN STORE - ACESSO"
+    Write-Host "----------------------------------------"
+    For ($i = 3; $i -ge 1; $i--) {
+        $inputPassword = Read-Host -AsSecureString "Digite a senha para acessar"
+        $plainPassword = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($inputPassword))
+        If ($plainPassword -eq $password) {
+            Write-Host "Acesso concedido!" -ForegroundColor Green
+            Start-Sleep -Seconds 1
+            Return $true
+        } Else {
+            Write-Host "Senha incorreta! Tentativas restantes: $($i - 1)" -ForegroundColor Red
+        }
+    }
+    Write-Host "Acesso negado. O script será encerrado." -ForegroundColor Yellow
+    Exit
+}
+
+# Validar senha antes de continuar
+ValidatePassword
+
+# Funcoes (como as anteriores)...
 
 # Menu principal
 Function MainMenu {
@@ -86,3 +110,4 @@ Do {
         Default { Write-Host "Escolha invalida. Tente novamente." }
     }
 } While ($choice -ne 0)
+
