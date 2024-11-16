@@ -96,7 +96,7 @@ Function OutrasOtimizacoes {
 # Menu principal
 Do {
     Write-Host "----------------------------------------"
-    Write-Host "Escolha uma opcao abaixo digitando o número correspondente:"
+    Write-Host "Escolha uma opcao abaixo digitando o numero correspondente:"
     Write-Host "[1] Criar Ponto de Restauracao"
     Write-Host "[2] Excluir Arquivos Temporarios"
     Write-Host "[3] Desativar Consumer Features"
