@@ -39,65 +39,79 @@ Function DeleteTemporaryFiles {
     Write-Host "Arquivos temporários excluídos!"
 }
 
-# Outras funções
+# Função para desativar recursos do consumidor
 Function DisableConsumerFeatures {
     Write-Host "Consumer Features desativadas!"
 }
 
+# Função para desativar telemetria
 Function DisableTelemetry {
     Write-Host "Telemetria desativada!"
 }
 
+# Função para desativar histórico de atividades
 Function DisableActivityHistory {
     Write-Host "Histórico de Atividades desativado!"
 }
 
+# Função para desativar GameDVR
 Function DisableGameDVR {
     Write-Host "GameDVR desativado!"
 }
 
+# Função para desativar hibernação
 Function DisableHibernation {
     Write-Host "Hibernação desativada!"
 }
 
+# Função para desativar Homegroup
 Function DisableHomegroup {
     Write-Host "Homegroup desativado!"
 }
 
+# Função para preferir IPv4
 Function PreferIPv4OverIPv6 {
     Write-Host "IPv4 preferido sobre IPv6!"
 }
 
+# Função para desativar rastreamento de localização
 Function DisableLocationTracking {
     Write-Host "Rastreamento de Localização desativado!"
 }
 
+# Função para desativar Storage Sense
 Function DisableStorageSense {
     Write-Host "Storage Sense desativado!"
 }
 
+# Função para desativar Wifi-Sense
 Function DisableWifiSense {
     Write-Host "Wifi-Sense desativado!"
 }
 
+# Função para habilitar finalizar tarefa com botão direito
 Function EnableEndTaskWithRightClick {
     Write-Host "Finalizar Tarefa com Botão Direito habilitado!"
 }
 
+# Função para executar limpeza de disco
 Function RunDiskCleanup {
     Write-Host "Executando Limpeza de Disco..."
     Start-Process -FilePath "cleanmgr.exe" -ArgumentList "/sagerun:1" -NoNewWindow -Wait
     Write-Host "Limpeza de Disco concluída!"
 }
 
+# Função para configurar terminal do Windows para PowerShell 7
 Function ChangeTerminalToPS7 {
     Write-Host "Terminal configurado para PowerShell 7!"
 }
 
+# Função para desativar telemetria do PowerShell 7
 Function DisablePS7Telemetry {
     Write-Host "Telemetria do PowerShell 7 desativada!"
 }
 
+# Função para configurar hibernação como padrão
 Function SetHibernationDefault {
     Write-Host "Hibernação configurada como padrão!"
 }
