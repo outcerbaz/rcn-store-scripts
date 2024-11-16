@@ -10,4 +10,4 @@ Remove-Item -Path "$env:LOCALAPPDATA\Microsoft\Windows\Explorer\thumbcache_*.db"
 # Write-Host "Finalizando processos em segundo plano..."
 # Stop-Process -Name "chrome" -Force 
 
-Write-Host "Otimização concluída!"
+Write-Host "https://discord.gg/dbPuEKxwUn"
