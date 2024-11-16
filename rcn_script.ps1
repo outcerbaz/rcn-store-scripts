@@ -81,7 +81,7 @@ Function OutrasOtimizacoes {
             9 { Write-Host "Desativando Barra de Notificacoes e Calendario..." }
             10 { Write-Host "Configurando Tela para Melhor Desempenho..." }
             11 { Write-Host "Ativando Menu Classico do Clique-Direito..." }
-            12 { Write-Host "Configurando Horário UTC (Dual Boot)..." }
+            12 { Write-Host "Configurando Horario UTC (Dual Boot)..." }
             13 { Write-Host "Removendo Todos os Aplicativos da Microsoft Store..." }
             14 { Write-Host "Removendo Microsoft Edge..." }
             15 { Write-Host "Removendo OneDrive..." }
@@ -96,7 +96,7 @@ Function OutrasOtimizacoes {
 # Menu principal
 Do {
     Write-Host "----------------------------------------"
-    Write-Host "Escolha uma opção abaixo digitando o número correspondente:"
+    Write-Host "Escolha uma opcao abaixo digitando o número correspondente:"
     Write-Host "[1] Criar Ponto de Restauracao"
     Write-Host "[2] Excluir Arquivos Temporarios"
     Write-Host "[3] Desativar Consumer Features"
@@ -116,7 +116,7 @@ Do {
     Write-Host "[17] Configurar Hibernação como padrão (ideal para laptops)"
     Write-Host "[18] Ativar plano de energia: Desempenho Maximo"
     Write-Host "[19] Desativar 'Aprimorar precisao do ponteiro'"
-    Write-Host "[20] Configurar teclado (repetição e intermitencia)"
+    Write-Host "[20] Configurar teclado (repeticao e intermitencia)"
     Write-Host "[21] Outras Otimizacoes"
     Write-Host "[0] Sair"
     Write-Host "----------------------------------------"
