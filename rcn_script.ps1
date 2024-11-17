@@ -60,7 +60,7 @@ Function OutrasOtimizacoes {
         Write-Host "[9] Desativar Barra de Notificações e Calendario"
         Write-Host "[10] Configurar Tela para Melhor Desempenho"
         Write-Host "[11] Ativar Menu Classico do Clique-Direito"
-        Write-Host "[12] Configurar Horário UTC (Dual Boot)"
+        Write-Host "[12] Configurar Horario UTC (Dual Boot)"
         Write-Host "[13] Remover Todos os Aplicativos da Microsoft Store"
         Write-Host "[14] Remover Microsoft Edge"
         Write-Host "[15] Remover OneDrive"
