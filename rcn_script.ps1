@@ -105,7 +105,7 @@ Do {
     Write-Host "[6] Desativar GameDVR"
     Write-Host "[7] Desativar Hibernacao"
     Write-Host "[8] Desativar Homegroup"
-    Write-Host "[9] Preferir IPv4 ao invés de IPv6"
+    Write-Host "[9] Preferir IPv4 ao inves de IPv6"
     Write-Host "[10] Desativar Rastreamento de Localizacao"
     Write-Host "[11] Desativar Storage Sense"
     Write-Host "[12] Desativar Wifi-Sense"
