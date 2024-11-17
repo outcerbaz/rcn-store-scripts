@@ -49,43 +49,43 @@ Function OutrasOtimizacoes {
         Write-Host "----------------------------------------"
         Write-Host "          OUTRAS OTIMIZACOES - CUIDADO"
         Write-Host "----------------------------------------"
-        Write-Host "[1] Bloquear Adobe Network"
-        Write-Host "[2] Remover Bloatware da Adobe"
-        Write-Host "[3] Desativar IPv6"
-        Write-Host "[4] Desativar Teredo"
-        Write-Host "[5] Desativar Aplicativos em Segundo Plano"
-        Write-Host "[6] Desativar Otimizacoes de Tela Cheia"
-        Write-Host "[7] Desativar Microsoft Copilot"
-        Write-Host "[8] Desativar MM Intel (vPro LMS)"
-        Write-Host "[9] Desativar Barra de Notificações e Calendario"
-        Write-Host "[10] Configurar Tela para Melhor Desempenho"
-        Write-Host "[11] Ativar Menu Classico do Clique-Direito"
-        Write-Host "[12] Configurar Horario UTC (Dual Boot)"
-        Write-Host "[13] Remover Todos os Aplicativos da Microsoft Store"
-        Write-Host "[14] Remover Microsoft Edge"
-        Write-Host "[15] Remover OneDrive"
-        Write-Host "[16] Bloquear Instalacoes de Software Razer"
+        Write-Host "[22] Bloquear Adobe Network"
+        Write-Host "[23] Remover Bloatware da Adobe"
+        Write-Host "[24] Desativar IPv6"
+        Write-Host "[25] Desativar Teredo"
+        Write-Host "[26] Desativar Aplicativos em Segundo Plano"
+        Write-Host "[27] Desativar Otimizacoes de Tela Cheia"
+        Write-Host "[28] Desativar Microsoft Copilot"
+        Write-Host "[29] Desativar MM Intel (vPro LMS)"
+        Write-Host "[30] Desativar Barra de Notificacoes e Calendario"
+        Write-Host "[31] Configurar Tela para Melhor Desempenho"
+        Write-Host "[32] Ativar Menu Classico do Clique-Direito"
+        Write-Host "[33] Configurar Horario UTC (Dual Boot)"
+        Write-Host "[34] Remover Todos os Aplicativos da Microsoft Store"
+        Write-Host "[35] Remover Microsoft Edge"
+        Write-Host "[36] Remover OneDrive"
+        Write-Host "[37] Bloquear Instalacoes de Software Razer"
         Write-Host "[0] Voltar"
         Write-Host "----------------------------------------"
 
         $opcao = Read-Host "Digite o numero da sua escolha"
         Switch ($opcao) {
-            1 { Write-Host "Bloqueando Adobe Network..." }
-            2 { Write-Host "Removendo Bloatware da Adobe..." }
-            3 { Write-Host "Desativando IPv6..." }
-            4 { Write-Host "Desativando Teredo..." }
-            5 { Write-Host "Desativando Aplicativos em Segundo Plano..." }
-            6 { Write-Host "Desativando Otimizações de Tela Cheia..." }
-            7 { Write-Host "Desativando Microsoft Copilot..." }
-            8 { Write-Host "Desativando MM Intel (vPro LMS)..." }
-            9 { Write-Host "Desativando Barra de Notificacoes e Calendario..." }
-            10 { Write-Host "Configurando Tela para Melhor Desempenho..." }
-            11 { Write-Host "Ativando Menu Classico do Clique-Direito..." }
-            12 { Write-Host "Configurando Horario UTC (Dual Boot)..." }
-            13 { Write-Host "Removendo Todos os Aplicativos da Microsoft Store..." }
-            14 { Write-Host "Removendo Microsoft Edge..." }
-            15 { Write-Host "Removendo OneDrive..." }
-            16 { Write-Host "Bloqueando Instalacoes de Software Razer..." }
+            22 { Write-Host "Bloqueando Adobe Network..." }
+            23 { Write-Host "Removendo Bloatware da Adobe..." }
+            24 { Write-Host "Desativando IPv6..." }
+            25 { Write-Host "Desativando Teredo..." }
+            26 { Write-Host "Desativando Aplicativos em Segundo Plano..." }
+            27 { Write-Host "Desativando Otimizacoes de Tela Cheia..." }
+            28 { Write-Host "Desativando Microsoft Copilot..." }
+            29 { Write-Host "Desativando MM Intel (vPro LMS)..." }
+            30 { Write-Host "Desativando Barra de Notificacoes e Calendario..." }
+            31 { Write-Host "Configurando Tela para Melhor Desempenho..." }
+            32 { Write-Host "Ativando Menu Classico do Clique-Direito..." }
+            33 { Write-Host "Configurando Horario UTC (Dual Boot)..." }
+            34 { Write-Host "Removendo Todos os Aplicativos da Microsoft Store..." }
+            35 { Write-Host "Removendo Microsoft Edge..." }
+            36 { Write-Host "Removendo OneDrive..." }
+            37 { Write-Host "Bloqueando Instalacoes de Software Razer..." }
             0 { Write-Host "Voltando para o menu principal..." -ForegroundColor Yellow; break }
             Default { Write-Host "Opcao invalida. Tente novamente." -ForegroundColor Red }
         }
